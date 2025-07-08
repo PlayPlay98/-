@@ -1,4 +1,3 @@
-#카메라 테스트 최종코드
 import cv2
 import mediapipe as mp
 import numpy as np
