@@ -1,4 +1,3 @@
-#실신감지 최종 모델학습 코드
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -11,8 +10,6 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classification_report
 from tensorflow.keras.callbacks import ReduceLROnPlateau
-
-
 
 
 # Mediapipe 솔루션 초기화 해주기
@@ -55,7 +52,7 @@ def load_data(data_dir, label_map):
     return np.array(X), np.array(y)
 
 # 데이터셋 경로와 레이블 맵
-data_dir = 'C:/Users/82104/Desktop/baekseok/2024 4-1/딥러닝 프로그래밍/dataset'
+data_dir = 'C:/Users/82104/Desktop/dataset'
 label_map = {0: 'fall', 1: 'not_fall'}
 
 # 데이터 로드해주기
@@ -117,3 +114,4 @@ plt.show()
 # 상세 분류 리포트 출력
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred_classes, target_names=labels))
+
